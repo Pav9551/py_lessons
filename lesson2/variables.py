@@ -14,3 +14,4 @@ print(type(amount))
 
 sweet = True # сладкое
 print(type(sweet))
+#test
