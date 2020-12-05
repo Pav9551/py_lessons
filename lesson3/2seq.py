@@ -27,3 +27,4 @@ print(result_list)
 input_list = input('Введите элементы списка через разделитель')
 
 
+
