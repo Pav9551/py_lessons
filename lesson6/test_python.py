@@ -38,6 +38,6 @@ def test_hypot():
     b = [4.00, 4.00, 4.00, 4.00, 4.00]
     c = [4.12, 4.47, 5.00, 5.66, 6.40]
     res = list(zip(a, b))
-    assert list(map(lambda y: round(math.hypot(*y),2), res)) == c
+    assert list(map(lambda y: round(math.hypot(*y), 2), res)) == c
 
 
