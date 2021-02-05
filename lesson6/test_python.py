@@ -19,19 +19,15 @@ def test_sorted():
 def test_pi():
     assert round(math.pi, 2) == 3.14
 
-
 def test_sqrt():
     values = [0, 1, 4, 9, 16, 25]
     result = [0, 1, 2, 3, 4, 5]
     assert list(map(lambda y: math.sqrt(y), values)) == result
 
-
 def test_pow():
     values = [0, 1, 2, 3, 4, 5]
     result = [0, 1, 4, 9, 16, 25]
     assert list(map(lambda y: math.pow(y,2), values)) == result
-
-
 
 def test_hypot():
     a = [1.00, 2.00, 3.00, 4.00, 5.00]
