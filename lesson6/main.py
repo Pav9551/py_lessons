@@ -8,6 +8,7 @@ response = 'N'# Переменная на выход
 
 # Меню программы
 while response != 'stop':
+    help_command();
     response = input('Укажите номер пункта меню (help - для вывода списка меню) -> ')
     if response == '1':  # Создать папку
         create_dir()
