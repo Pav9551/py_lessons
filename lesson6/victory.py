@@ -7,6 +7,7 @@ def datesplit(data):
     month = int(data[1]);
     year = int(data[2]);
     return day,month,year
+
 def farmatdate(data):
     days = ["нулевое","первое", "второе", "третье", "четвертое", "пятое", "шестое", "седьмое",
             "восьмое", "девятое", "десятое", "одиннадцатое", "двенадцатое", "тринадцатое",
@@ -17,6 +18,7 @@ def farmatdate(data):
     day,month,year = datesplit(data)
     fdate = str(days[day]) + ' ' + str(months[month]) + ' ' + str(year) + 'г.'
     return fdate
+
 all_ques = [ 'Когда вышел фильм "Тор: Царство тьмы"?',      #2013
              'Когда вышел фильм "Первый мститель: Другая война"?',      #2014
              'Когда вышел фильм "Человек-муравей"?',      #2015

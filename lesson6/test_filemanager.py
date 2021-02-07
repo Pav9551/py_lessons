@@ -5,6 +5,7 @@ import platform
 def getpath():
     print("Текущая папка:")
     print(os.getcwd())
+
 def test_create_dir():
     answer = 'test_folder'#имя создаваемой папки
     temp_dir = os.path.join(os.getcwd(), answer)
@@ -59,6 +60,7 @@ def test_del_file_or_dir():
     except:
         print("Ошибка удаления файла/папки.")
     assert os.path.exists(temp_name) == False
+
 def test_del_file_or_dir_copy():
     answer = 'test_folder_copy'#имя удаляемой папки
     temp_name = os.path.join(os.getcwd(), answer)

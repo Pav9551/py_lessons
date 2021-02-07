@@ -7,10 +7,12 @@ def test_filter():
     test_list = [1, 7, 4, -5, 3]
     result_list = [1, 7, 4, 3]
     assert list(filter(lambda y: True if y > 0 else False, test_list)) == result_list
+
 def test_map():
     values = [-2, -1, 0, 1, 2]
     result = [-4, -2, 0, 2, 4]
     assert list(map(lambda y: y*2, values)) == result
+
 def test_sorted():
     values = [1, 5, 8, -9, 13]
     result = [-9, 1, 5, 8, 13]
