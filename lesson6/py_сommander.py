@@ -59,18 +59,18 @@ def copy_file_or_dir():
     else:
         src_answer = os.path.join(os.getcwd(), src_answer)
         dest_answer = os.path.join(os.getcwd(), dest_answer)
-        if not os.path.exists(src_answer):
-            print("Исходный файл/папка не найден")
-        else:
-            try:
-                if os.path.isfile(src_answer):          # Файл
-                    shutil.copy2(src_answer, dest_answer)
-                    print("Файл успешно скопирован")
-                elif os.path.isdir(src_answer):         # Директория
-                    shutil.copytree(src_answer, dest_answer)
-                    print("Каталог успешно скопирован")
-            except IOError as e:
-                print(f'ОШИБКА. Сообщение: {e.strerror}')
+    if not os.path.exists(src_answer):
+        print("Исходный файл/папка не найден")
+    else:
+        try:
+            if os.path.isfile(src_answer):  # Файл
+                shutil.copy2(src_answer, dest_answer)
+                print("Файл успешно скопирован")
+            elif os.path.isdir(src_answer):  # Директория
+                shutil.copytree(src_answer, dest_answer)
+                print("Каталог успешно скопирован")
+        except IOError as e:
+            print(f'ОШИБКА. Сообщение: {e.strerror}')
 def find_all_in_current_dir():
     getpath()
     all = []
