@@ -1,0 +1,65 @@
+Index: lesson6/py_сommander.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import os\r\nimport shutil\r\nimport sys\r\nimport platform\r\n\r\ndef help_command():\r\n    print('---------------------------------------------')\r\n    print('            Файловый менеджер')\r\n    print(' 1 - Создать папку')\r\n    print(' 2 - Удалить (файл/папку)')\r\n    print(' 3 - Копировать (файл/папку)')\r\n    print(' 4 - Просмотр содержимого рабочей директории')\r\n    print(' 5 - Посмотреть только папки')\r\n    print(' 6 - Посмотреть только файлы')\r\n    print(' 7 - Просмотр информации об операционной системе')\r\n    print(' 8 - Создатель программы')\r\n    print(' 9 - Играть в викторину')\r\n    print(' 10 - Мой банковский счет')\r\n    print(' 0 / stop - Выход')\r\n    print('---------------------------------------------')\r\ndef getpath():\r\n    print(\"Текущая папка:\")\r\n    print(os.getcwd())\r\ndef create_dir():\r\n    getpath()\r\n    answer = input('Укажите имя новой папки -> ')\r\n    temp_dir = os.path.join(os.getcwd(), answer)\r\n    try:\r\n        if os.path.exists(temp_dir):\r\n            print('Указанная папка уже существует')\r\n        else:\r\n            os.mkdir(temp_dir)\r\n            print('Cоздана папка: {}'.format(answer))\r\n            print(\"\")\r\n    except:\r\n        pass\r\ndef del_file_or_dir():\r\n    getpath()\r\n    answer = input('Укажите имя файла или папки для удаления -> ')\r\n    temp_name = os.path.join(os.getcwd(), answer)\r\n    try:\r\n        if os.path.exists(temp_name):       # Объект найден\r\n            if os.path.isfile(temp_name):   # Файл\r\n                os.remove(temp_name)\r\n                print('Файл удалён: {}'.format(answer))\r\n            elif os.path.isdir(temp_name):  # Директория\r\n                shutil.rmtree(temp_name)\r\n                print(\"Папка успешно удалена\")\r\n        else:\r\n            print(\"Указанный файл/папка не найдена\")\r\n    except:\r\n        print(\"Ошибка удаления файла/папки.\")\r\ndef copy_file_or_dir():\r\n    getpath()\r\n    src_answer = input('Укажите имя исходного файла/папки для копирования -> ')\r\n    dest_answer = input('Укажите новое имя файла/папки -> ')\r\n    if src_answer == dest_answer:\r\n        dest_answer = dest_answer + \"_copy\"\r\n    else:\r\n        src_answer = os.path.join(os.getcwd(), src_answer)\r\n        dest_answer = os.path.join(os.getcwd(), dest_answer)\r\n    if not os.path.exists(src_answer):\r\n        print(\"Исходный файл/папка не найден\")\r\n    else:\r\n        try:\r\n            if os.path.isfile(src_answer):  # Файл\r\n                shutil.copy2(src_answer, dest_answer)\r\n                print(\"Файл успешно скопирован\")\r\n            elif os.path.isdir(src_answer):  # Директория\r\n                shutil.copytree(src_answer, dest_answer)\r\n                print(\"Каталог успешно скопирован\")\r\n        except IOError as e:\r\n            print(f'ОШИБКА. Сообщение: {e.strerror}')\r\ndef find_all_in_current_dir():\r\n    getpath()\r\n    all = []\r\n    print(\"Список директорий и файлов в текущем каталоге:\")\r\n    for item in os.walk(os.getcwd()):\r\n        all.append(item)\r\n    dirs = all[0][1]\r\n    print(\"Директории:\")\r\n    for dir in dirs:\r\n        print(f\"{dir}\")\r\n    files = all[0][2]\r\n    print(\"Файлы:\")\r\n    for file in files:\r\n        print(f\"{file}\")\r\n    print(f\"*************\")\r\ndef get_files_in_current_dir():\r\n    print(\"Список файлов в текущей директории:\")\r\n    print(\"\\n\".join(list(filter(lambda x: os.path.isfile(x), os.listdir(\".\")))))\r\n    print()\r\n\r\n\r\ndef get_dir_in_current_dir():\r\n    print(\"Список директорий в текущей директории:\")\r\n    print(\"\\n\".join(list(filter(lambda x: os.path.isdir(x), os.listdir(\".\")))))\r\n    print()\r\ndef get_system_info():\r\n    print(\"\\n\")\r\n    print(\"**************************\")\r\n    print(\"Информация о системе:\")\r\n    ops, name, oper_ver, build, proc, proc_fam = platform.uname()\r\n    print(f\"Операционная система: {ops}\")\r\n    print(f\"Архитектура: {platform.architecture()}\")\r\n    print(f\"Платформа: {sys.platform}\")\r\n    print(f\"Версия операционной системы: {oper_ver}\")\r\n    print(f\"Релиз операционной системы: {build}\")\r\n    print(f\"Пользователь системы: {name}\")\r\n    print()\r\n    print(f\"Архитектура процессора: {proc}\")\r\n    print(f\"Модель процессора: {proc_fam}\")\r\n    print()\r\n    print(f\"Версия Python: {' от '.join(platform.python_build())}\")\r\n    print(f\"Версия компилятора Python: {platform.python_compiler()}\")\r\n    print(f\"Реализация Python: {platform.python_implementation()}\")\r\n    print(f\"Папка установки интерпретатора Python: {sys.prefix}\")\r\n    print()\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson6/py_сommander.py b/lesson6/py_сommander.py
+--- a/lesson6/py_сommander.py	
++++ b/lesson6/py_сommander.py	
+@@ -18,9 +18,11 @@
+     print(' 10 - Мой банковский счет')
+     print(' 0 / stop - Выход')
+     print('---------------------------------------------')
++
+ def getpath():
+     print("Текущая папка:")
+     print(os.getcwd())
++
+ def create_dir():
+     getpath()
+     answer = input('Укажите имя новой папки -> ')
+@@ -34,6 +36,7 @@
+             print("")
+     except:
+         pass
++
+ def del_file_or_dir():
+     getpath()
+     answer = input('Укажите имя файла или папки для удаления -> ')
+@@ -50,6 +53,7 @@
+             print("Указанный файл/папка не найдена")
+     except:
+         print("Ошибка удаления файла/папки.")
++
+ def copy_file_or_dir():
+     getpath()
+     src_answer = input('Укажите имя исходного файла/папки для копирования -> ')
+@@ -71,6 +75,7 @@
+                 print("Каталог успешно скопирован")
+         except IOError as e:
+             print(f'ОШИБКА. Сообщение: {e.strerror}')
++
+ def find_all_in_current_dir():
+     getpath()
+     all = []
+@@ -86,16 +91,17 @@
+     for file in files:
+         print(f"{file}")
+     print(f"*************")
++
+ def get_files_in_current_dir():
+     print("Список файлов в текущей директории:")
+     print("\n".join(list(filter(lambda x: os.path.isfile(x), os.listdir(".")))))
+     print()
+ 
+-
+ def get_dir_in_current_dir():
+     print("Список директорий в текущей директории:")
+     print("\n".join(list(filter(lambda x: os.path.isdir(x), os.listdir(".")))))
+     print()
++
+ def get_system_info():
+     print("\n")
+     print("**************************")

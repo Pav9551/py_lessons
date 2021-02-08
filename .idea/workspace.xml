@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Added lesson6">
+    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Added test_python.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson6/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson6/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson6/test_filemanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson6/test_filemanager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson6/test_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson6/test_python.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson6/victory.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson6/victory.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,11 +152,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_python" />
-        <item itemvalue="Python.test_filemanager" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.test_filemanager" />
+        <item itemvalue="Python.test_python" />
       </list>
     </recent_temporary>
   </component>
@@ -201,14 +196,7 @@
       <option name="project" value="LOCAL" />
       <updated>1612465842126</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added lesson6">
-      <created>1612530273756</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1612530273756</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,19 +204,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/lesson6" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -238,7 +214,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Copied folder lesson5 to lesson6" />
     <MESSAGE value="Added test_python.py" />
-    <MESSAGE value="Added lesson6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added lesson6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test_python.py" />
   </component>
 </project>
