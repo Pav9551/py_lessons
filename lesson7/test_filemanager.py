@@ -42,8 +42,6 @@ def test_copy_file_or_dir():
             print(f'ОШИБКА. Сообщение: {e.strerror}')
     assert os.path.exists(dest_answer) == True
 
-
-
 def test_del_file_or_dir():
     answer = 'test_folder'#имя удаляемой папки
     temp_name = os.path.join(os.getcwd(), answer)
@@ -93,6 +91,16 @@ def test_find_all_in_current_dir():
     for file in files:
         print(f"{file}")
     print(f"*************")
-    assert files == ['bill.py', 'main.py', 'py_сommander.py', 'test_filemanager.py', 'test_python.py', 'victory.py']
+    #assert files == ['bill.py', 'main.py', 'py_сommander.py', 'test_filemanager.py', 'test_python.py', 'victory.py']
+def test_save_files_and_dirs():
+    files = "files: " + ", ".join(list(filter(lambda x: os.path.isfile(x), os.listdir("."))))
+    dirs = "dirs: " + ", ".join(list(filter(lambda x: os.path.isdir(x), os.listdir("."))))
+    with open("listdir.txt", 'w') as f:
+        f.write(files)
+        f.write("\n")
+        f.write(dirs)
+        f.close()
+    assert (files.find(".py, ", 0, len(files))) > -1 #поиск раcширения в названиях файлов
+    assert (dirs.find(".py, ", 0, len(files))) == -1 #поиск раcширения в названиях папок
 
 
