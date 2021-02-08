@@ -16,11 +16,14 @@ def help_command():
     print(' 8 - Создатель программы')
     print(' 9 - Играть в викторину')
     print(' 10 - Мой банковский счет')
+    print(' 11 - Cохранить содержимое рабочей директории в файл')
     print(' 0 / stop - Выход')
     print('---------------------------------------------')
+
 def getpath():
     print("Текущая папка:")
     print(os.getcwd())
+
 def create_dir():
     getpath()
     answer = input('Укажите имя новой папки -> ')
@@ -34,6 +37,7 @@ def create_dir():
             print("")
     except:
         pass
+
 def del_file_or_dir():
     getpath()
     answer = input('Укажите имя файла или папки для удаления -> ')
@@ -50,6 +54,7 @@ def del_file_or_dir():
             print("Указанный файл/папка не найдена")
     except:
         print("Ошибка удаления файла/папки.")
+
 def copy_file_or_dir():
     getpath()
     src_answer = input('Укажите имя исходного файла/папки для копирования -> ')
@@ -71,6 +76,7 @@ def copy_file_or_dir():
                 print("Каталог успешно скопирован")
         except IOError as e:
             print(f'ОШИБКА. Сообщение: {e.strerror}')
+
 def find_all_in_current_dir():
     getpath()
     all = []
@@ -86,6 +92,7 @@ def find_all_in_current_dir():
     for file in files:
         print(f"{file}")
     print(f"*************")
+
 def get_files_in_current_dir():
     print("Список файлов в текущей директории:")
     print("\n".join(list(filter(lambda x: os.path.isfile(x), os.listdir(".")))))
@@ -96,6 +103,7 @@ def get_dir_in_current_dir():
     print("Список директорий в текущей директории:")
     print("\n".join(list(filter(lambda x: os.path.isdir(x), os.listdir(".")))))
     print()
+
 def get_system_info():
     print("\n")
     print("**************************")
@@ -116,4 +124,17 @@ def get_system_info():
     print(f"Реализация Python: {platform.python_implementation()}")
     print(f"Папка установки интерпретатора Python: {sys.prefix}")
     print()
+
+def save_files_and_dirs():
+    files = "files: " + ", ".join(list(filter(lambda x: os.path.isfile(x), os.listdir("."))))
+    dirs = "dirs: " + ", ".join(list(filter(lambda x: os.path.isdir(x), os.listdir("."))))
+    with open("listdir.txt", 'w') as f:
+        f.write(files)
+        f.write("\n")
+        f.write(dirs)
+        f.close()
+
+
+
+
 

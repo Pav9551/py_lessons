@@ -33,11 +33,52 @@
 
 Для реализации основного меню можно использовать пример ниже или написать свой
 """
+import os
+import json
+
+def create_json(bill, my_list):
+    name = 'bill_json.txt'
+    save_data = {
+        'bill': bill,
+        'list': my_list,
+    }
+    load_data = {
+        'bill': 0,
+        'list': [],
+    }
+    src_answer = os.path.join(os.getcwd(), name)
+    if not os.path.exists(src_answer):
+        print("Это первый запуск. Создаем файл")
+        with open( name, 'w', encoding='utf-8') as f:
+            f.write(json.dumps(save_data))
+            f.close()
+        with open(name, 'r', encoding='utf-8') as f:
+            load_data = json.load(f)
+            f.close()
+    else:
+        with open(name, 'r', encoding='utf-8') as f:
+            load_data = json.load(f)
+            f.close()
+    return load_data
+
+def save_json(bill, my_list):
+    name = 'bill_json.txt'
+    save_data = {
+        'bill': bill,
+        'list': my_list,
+    }
+    with open(name, 'w', encoding='utf-8') as f:
+        f.write(json.dumps(save_data))
+        f.close()
 
 def bill_game():
-    bill = 100;
+    bill = 0;
     my_list = []
+    load_data = create_json(bill, my_list)
+    bill = load_data['bill']
+    my_list = load_data['list']
     while True:
+        save_json(bill, my_list)
         print('На Вашем счете: {} руб.'.format(bill))
         print('1. пополнение счета')
         print('2. покупка')

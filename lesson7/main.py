@@ -40,6 +40,9 @@ while response != 'stop':
     elif response == '10':  # Мой банковский счет
         bill_game()
         pass
+    elif response == '11':  # Cохранить содержимое рабочей директории в файл
+        save_files_and_dirs()
+        pass
 
     elif (response.lower() == 'help'):  # help
         help_command();
