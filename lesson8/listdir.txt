@@ -1,0 +1,2 @@
+files: bill.py, bill_json.txt, listdir.txt, main.py, py_ñommander.py, test_bill.py, test_filemanager.py, test_python.py, victory.py
+dirs: .pytest_cache, __pycache__

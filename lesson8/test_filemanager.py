@@ -102,5 +102,33 @@ def test_save_files_and_dirs():
         f.close()
     assert (files.find(".py, ", 0, len(files))) > -1 #поиск раcширения в названиях файлов
     assert (dirs.find(".py, ", 0, len(files))) == -1 #поиск раcширения в названиях папок
+def test_get_files():
+    files = "\n".join(list(filter(lambda x: os.path.isfile(x), os.listdir("."))))
+    files_g = "\n".join(name for name in os.listdir(".") if os.path.isfile(name))
+    assert files == files_g
+def test_get_dirs():
+    dirs = "\n".join(list(filter(lambda x: os.path.isdir(x), os.listdir("."))))
+    dirs_g = "\n".join(name for name in os.listdir(".") if os.path.isdir(name))
+    assert dirs == dirs_g
+def add_path(f):
+    # inner - итоговая функция с новым поведение
+    def inner(*args, **kwargs):
+        # поведение до вызова
+        print("Текущая папка:")
+        print(os.getcwd())
+        result = f(*args, **kwargs)
+        return True
+    # возвращается функция inner с новым поведением
+    return inner
+
+@add_path
+def func():
+    return False
+
+def test_path():
+    assert func() == True
+
+
+
 
 
