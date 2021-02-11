@@ -3,6 +3,17 @@ import shutil
 import sys
 import platform
 
+def add_path(f):
+    # inner - итоговая функция с новым поведение
+    def inner(*args, **kwargs):
+        # поведение до вызова
+        print("Текущая папка:")
+        print(os.getcwd())
+        result = f(*args, **kwargs)
+        return result
+    # возвращается функция inner с новым поведением
+    return inner
+
 def help_command():
     print('---------------------------------------------')
     print('            Файловый менеджер')
@@ -20,12 +31,9 @@ def help_command():
     print(' 0 / stop - Выход')
     print('---------------------------------------------')
 
-def getpath():
-    print("Текущая папка:")
-    print(os.getcwd())
 
+@add_path
 def create_dir():
-    getpath()
     answer = input('Укажите имя новой папки -> ')
     temp_dir = os.path.join(os.getcwd(), answer)
     try:
@@ -35,11 +43,10 @@ def create_dir():
             os.mkdir(temp_dir)
             print('Cоздана папка: {}'.format(answer))
             print("")
-    except:
-        pass
-
+    except IOError as e:
+        print(f'ОШИБКА. Сообщение: {e.strerror}')
+@add_path
 def del_file_or_dir():
-    getpath()
     answer = input('Укажите имя файла или папки для удаления -> ')
     temp_name = os.path.join(os.getcwd(), answer)
     try:
@@ -54,9 +61,8 @@ def del_file_or_dir():
             print("Указанный файл/папка не найдена")
     except:
         print("Ошибка удаления файла/папки.")
-
+@add_path
 def copy_file_or_dir():
-    getpath()
     src_answer = input('Укажите имя исходного файла/папки для копирования -> ')
     dest_answer = input('Укажите новое имя файла/папки -> ')
     if src_answer == dest_answer:
@@ -76,9 +82,8 @@ def copy_file_or_dir():
                 print("Каталог успешно скопирован")
         except IOError as e:
             print(f'ОШИБКА. Сообщение: {e.strerror}')
-
+@add_path
 def find_all_in_current_dir():
-    getpath()
     all = []
     print("Список директорий и файлов в текущем каталоге:")
     for item in os.walk(os.getcwd()):
@@ -95,13 +100,15 @@ def find_all_in_current_dir():
 
 def get_files_in_current_dir():
     print("Список файлов в текущей директории:")
-    print("\n".join(list(filter(lambda x: os.path.isfile(x), os.listdir(".")))))
+    #print("\n".join(list(filter(lambda x: os.path.isfile(x), os.listdir(".")))))
+    print("\n".join(name for name in os.listdir(".") if os.path.isfile(name)))
     print()
 
 
 def get_dir_in_current_dir():
     print("Список директорий в текущей директории:")
-    print("\n".join(list(filter(lambda x: os.path.isdir(x), os.listdir(".")))))
+    #print("\n".join(list(filter(lambda x: os.path.isdir(x), os.listdir(".")))))
+    print("\n".join(name for name in os.listdir(".") if os.path.isdir(name)))
     print()
 
 def get_system_info():

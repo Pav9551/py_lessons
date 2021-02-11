@@ -102,7 +102,6 @@ def bill_game():
                 bill = bill - cost
                 st = str(bay) + ':' + str(cost) + 'р.'
                 my_list.append(st)
-            pass
         elif choice == '3':
             print('Список покупок: ')
             for number in my_list:
@@ -111,4 +110,4 @@ def bill_game():
         elif choice == '4':
             break
         else:
-            print('Неверный пункт меню')
+            print('Введите от одного до четырех.') if choice.isdigit() else print('Это не цифра.')
