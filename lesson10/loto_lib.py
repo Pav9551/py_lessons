@@ -35,6 +35,7 @@ class Card:
         self.win = False
         self.in_game = True
         self.good_answer = True
+        self.arr = self.numbers
         self.user = user
     def show_card(self):
         print(f'--------карточка {self.user}--------')
@@ -43,11 +44,11 @@ class Card:
         #print(self.numbers[9:18])
         #print(self.numbers[18:29])
 
-        arr = np.where(self.numbers == 0, '', np.where(self.numbers == -1, '-', self.numbers)) #TODO некрасиво
+        self.arr = np.where(self.numbers == 0, '', np.where(self.numbers == -1, '-', self.numbers)) #TODO некрасиво
         #self.numbers = arr
-        print(arr[:9])
-        print(arr[9:18])
-        print(arr[18:29])
+        print(self.arr[:9])
+        print(self.arr[9:18])
+        print(self.arr[18:29])
         print(f'************************************')
         #print(str(arr[:9]).)
     def strike_out_computer(self,value):
