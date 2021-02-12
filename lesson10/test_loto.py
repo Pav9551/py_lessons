@@ -1,7 +1,7 @@
 import numpy as np
 import unittest
 
-from loto_lib import Bag,Card
+from loto_lib import Bag,Card,zero_and_ones
 
 def test_get_barrel():
     our_bag = Bag()
@@ -10,6 +10,8 @@ def test_get_barrel():
         print(our_bag.get_barrel())
     #последний боченок вынут несколько раз
     assert our_bag.get_barrel() == our_bag.get_barrel()
+def test_zero_and_ones():
+    assert sum(zero_and_ones()) == 5
 class Test_loto(unittest.TestCase):
     def test_create_Bag(self):
         our_bag = Bag()
@@ -17,6 +19,9 @@ class Test_loto(unittest.TestCase):
     def test_str(self):
         our_bag = Bag()
         self.assertIn('Номера бочонков по порядку вытаскивания:', str(our_bag))
+    def test_len(self):
+        our_bag = Bag()
+        self.assertEqual(len(our_bag), 90)# 90 боченков
     def test_numbers(self):
         our_bag = Bag()
         self.assertEqual(len(our_bag.numbers), 90)# 90 боченков
