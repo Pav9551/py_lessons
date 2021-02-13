@@ -25,6 +25,9 @@ class Test_loto(unittest.TestCase):
     def test_numbers(self):
         our_bag = Bag()
         self.assertEqual(len(our_bag.numbers), 90)# 90 боченков
+    def test_get_barrel(self):
+        our_bag = Bag()
+        self.assertNotEqual(our_bag.get_barrel(), our_bag.get_barrel())
     def test_bag_equal(self):
         test_bag = Bag()
         test_bag2 = Bag()
