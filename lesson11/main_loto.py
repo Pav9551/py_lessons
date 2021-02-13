@@ -120,7 +120,6 @@ while response != 'stop':
     elif response == '3':  # Компьютер против компьютера
         comp_vs_comp()
         pass
-
     elif (response.lower() == 'help'):  # help
         help_command();
         pass
