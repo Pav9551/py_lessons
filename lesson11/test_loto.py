@@ -25,9 +25,15 @@ class Test_loto(unittest.TestCase):
     def test_numbers(self):
         our_bag = Bag()
         self.assertEqual(len(our_bag.numbers), 90)# 90 боченков
-    def test_get_barrel(self):
-        our_bag = Bag()
-        self.assertNotEqual(our_bag.get_barrel(), our_bag.get_barrel())
+    def test_bag_equal(self):
+        test_bag = Bag()
+        test_bag2 = Bag()
+        test_bag = test_bag2
+        self.assertTrue(test_bag == test_bag2)
+    def test_bag_ne(self):
+        test_bag = Bag()
+        test_bag2 = Bag()
+        self.assertTrue(test_bag != test_bag2)
     def test_create_Card(self):
         Card1 = Card("Компьютер 1")
         self.assertEqual(len(Card1.numbers), 27)  # 90 боченков
@@ -55,6 +61,22 @@ class Test_loto(unittest.TestCase):
             Card1.strike_out_computer(barrel)  # зачеркиваем
             Card1.check_win_card()  # проверяем победителя
         self.assertTrue(Card1.win)
+    def test_card_str(self):
+        Card1 = Card("Компьютер 1")
+        self.assertIn('Содержимое карточки:', str(Card1))
+    def test_card_len(self):
+        Card1 = Card("Компьютер 1")
+        self.assertEqual(len(Card1), 15)# 15 значений не зачеркнуто
+    def test_card_equal(self):
+        Card1 = Card("Компьютер 1")
+        Card2 = Card("Компьютер 2")
+        Card1 = Card2
+        self.assertTrue(Card1 == Card2)
+    def test_card_ne(self):
+        Card1 = Card("Компьютер 1")
+        Card2 = Card("Компьютер 2")
+        self.assertTrue(Card1 != Card2)
+
 
 
 

@@ -120,7 +120,22 @@ while response != 'stop':
     elif response == '3':  # Компьютер против компьютера
         comp_vs_comp()
         pass
+    elif response == '4':  # Компьютер против компьютера
+        #Card1 = Card("Игрок 1")
+        #print(f'{str(Card1)}')
+        #print(f'{len(Card1)}')
+        test_bag = Bag()
+        print(f'{str(test_bag)}')
+        test_bag2 = Bag()
+        print(f'{str(test_bag2)}')
 
+        test_bag2 = test_bag
+        print(f'{str(test_bag2)}')
+        print(f'{test_bag2 == test_bag}')
+        print(f'{test_bag2.__eq__(test_bag)}')
+
+
+        pass
     elif (response.lower() == 'help'):  # help
         help_command();
         pass

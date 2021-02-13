@@ -23,6 +23,10 @@ class Bag:
         if len(self.numbers) > 1:
             self.numbers = np.delete(self.numbers, 0)
         return self.current_barrel
+    def __eq__(self, other):
+        return str(self.numbers) == str(other.numbers)
+    def __ne__(self, other):
+        return str(self.numbers) != str(other.numbers)
 
 class Card:
     def __init__(self, user):
@@ -68,6 +72,16 @@ class Card:
     def check_win_card(self):
         if np.sum(self.numbers) == -15:
             self.win = True
+    def __str__(self):
+        return f'Содержимое карточки:{self.numbers}'
+    def __len__(self):
+        filt = (self.numbers > 0)
+        return len(self.numbers[filt])
+    def __eq__(self, other):
+        return str(self.numbers) == str(other.numbers)
+    def __ne__(self, other):
+        return str(self.numbers) != str(other.numbers)
+
 
 
 
