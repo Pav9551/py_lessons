@@ -118,7 +118,7 @@ class HH:
         result = requests.get(url_vacancies, params=params).json()
 
         #pprint.pprint(result)
-        print(result['items'][0]['url'])
+        #print(result['items'][0]['url'])
         #print(result['items'][0]['alternate_url'])
         for res in result['items']:
             print(res['name'] + ' ' + res['alternate_url'])
