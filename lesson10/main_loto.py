@@ -123,9 +123,12 @@ while response != 'stop':
 
     elif (response.lower() == 'help'):  # help
         help_command();
+
         pass
     elif (response == '0') or (response.lower() == 'stop'):  # Выход
         print('Выход из программы...')
         break
+
+
     else:
         print("Повторите ввод.")

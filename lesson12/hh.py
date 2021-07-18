@@ -112,7 +112,14 @@ class HH:
             'page': 1
         }
         result = requests.get(url_vacancies, params=params).json()
-        #print(result['alternate_url'])
-        pprint.pprint(result['alternate_url'])
+       # pprint.pprint(result['alternate_url'])
+
+
+        result = requests.get(url_vacancies, params=params).json()
+
         #pprint.pprint(result)
+        print(result['items'][0]['url'])
+        #print(result['items'][0]['alternate_url'])
+        for res in result['items']:
+            print(res['name'] + ' ' + res['alternate_url'])
         return 'OK'

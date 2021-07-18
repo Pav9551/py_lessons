@@ -94,6 +94,7 @@ def bill_game():
         elif choice == '2':
             print('Введите сумму покупки: ')
             cost = int(input())  # ввод
+
             if cost > bill:
                 print('денег не хватает.')
             else:
