@@ -106,20 +106,38 @@ class HH:
         url_vacancies = f'{DOMAIN}vacancies'
 
         params = {
-            'text': 'Arduino',
-            'area': '1',
+            #'text': 'Arduino OR Python',
+            #'text': 'NAME:(Python OR Java) AND COMPANY_NAME:(1 OR 2 OR Yandex) AND (Django OR Spring)',
+            #'text': 'Arduino',
+            #'text': 'Python',
+            'text': 'Arduino OR Python',
+            'area': area,
             #     # страница
             'page': 1
         }
-        result = requests.get(url_vacancies, params=params).json()
-       # pprint.pprint(result['alternate_url'])
-
 
         result = requests.get(url_vacancies, params=params).json()
 
         #pprint.pprint(result)
         #print(result['items'][0]['url'])
-        #print(result['items'][0]['alternate_url'])
+
+        return_urls = []
         for res in result['items']:
-            print(res['name'] + ' ' + res['alternate_url'])
-        return 'OK'
+            #pprint.pprint(res['address'])
+
+            if isinstance(res['address'], dict) :
+                #print(type(res['address']))
+                lat = res['address']['lat']
+                lng = res['address']['lng']
+            else:
+                lat = 0
+                lng = 0
+
+            if isinstance(lat , float) and isinstance(lng , float):
+                if (lng > 37.55) and (lat > 55.72):
+                    #print(res['name'] + ' ' + res['alternate_url'])
+                    #print(type(lat))
+                    #print(lng)
+                    print(res['name'] + ' ' + res['alternate_url'])
+                    #return_urls.append(res['name'] + ': ' + res['alternate_url'])
+        return return_urls
