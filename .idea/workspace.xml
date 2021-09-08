@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="">
+    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Added lesson7">
+      <change afterPath="$PROJECT_DIR$/lesson12/Airtable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/py_lessons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_lessons.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson12/Airtable.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson12/Airtable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson12/hh.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson12/hh.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +48,7 @@
       <recent name="C:\Users\pavel\PycharmProjects\py_lessons\lesson6" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Airtable">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="Airtable" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py_lessons" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,9 +177,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Airtable" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.bill" />
+        <item itemvalue="Python.Airtable" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.hh" />
       </list>
@@ -226,14 +229,7 @@
       <option name="project" value="LOCAL" />
       <updated>1612887079646</updated>
     </task>
-    <task id="LOCAL-00006" summary="Added lesson12 Airtable.py">
-      <created>1628173486092</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1628173486092</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,7 +248,6 @@
     <MESSAGE value="Copied folder lesson5 to lesson6" />
     <MESSAGE value="Added test_python.py" />
     <MESSAGE value="Added lesson7" />
-    <MESSAGE value="Added lesson12 Airtable.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added lesson12 Airtable.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added lesson7" />
   </component>
 </project>
