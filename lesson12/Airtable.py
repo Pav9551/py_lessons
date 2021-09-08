@@ -1,6 +1,6 @@
-AIRTABLE_BASE_ID = ''
-AIRTABLE_NAME_ID = ''
-AIRTABLE_API_KEY = ''
+AIRTABLE_BASE_ID = 'appbtZQhnZqNKg4FB'
+AIRTABLE_NAME_ID = 'Table%201'
+AIRTABLE_API_KEY = 'keyubxjXqAckKCoY0'
 endpoint = f'https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/{AIRTABLE_NAME_ID}'
 #python requests headers
 headers = {
