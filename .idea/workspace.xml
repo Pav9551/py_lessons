@@ -4,61 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Added templates">
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/build-assets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/build-pug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/build-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/build-scss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/clean.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/render-assets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/render-pug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/render-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/render-scss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/sb-watch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/start-debug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/scripts/start.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/assets/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/assets/img/avataaars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/assets/img/portfolio/cabin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/assets/img/portfolio/cake.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/assets/img/portfolio/circus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/assets/img/portfolio/game.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/assets/img/portfolio/safe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/assets/img/portfolio/submarine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/pug/includes/portfolio-modal-1.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/pug/includes/portfolio-modal-2.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/pug/includes/portfolio-modal-3.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/pug/includes/portfolio-modal-4.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/pug/includes/portfolio-modal-5.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/pug/includes/portfolio-modal-6.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/pug/index.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/_global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/components/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/components/_divider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/components/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/components/_navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/sections/_footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/sections/_masthead.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/sections/_portfolio.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/variables/_borders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/variables/_colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/variables/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/variables/_spacing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/template_bootstrap/startbootstrap-freelancer-master/src/scss/variables/_typography.scss" afterDir="false" />
+    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Added homework">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson12/IFTTT.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson12/IFTTT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson12/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/lesson12/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/hh03.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson13/nu13-htmlcss-master/hh03.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/test_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson7/test_python.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660483329589</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added template startbootstrap-freelancer-master">
+      <created>1660501019011</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660501019011</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added homework">
+      <created>1660501103223</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660501103223</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -335,6 +296,8 @@
     <MESSAGE value="Added IFTTT" />
     <MESSAGE value="Added lesson13" />
     <MESSAGE value="Added templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added templates" />
+    <MESSAGE value="Added template startbootstrap-freelancer-master" />
+    <MESSAGE value="Added homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added homework" />
   </component>
 </project>
