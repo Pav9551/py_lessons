@@ -39,3 +39,4 @@ def test_hypot():
     assert list(map(lambda y: round(math.hypot(*y), 2), res)) == c
 
 
+
