@@ -3,8 +3,9 @@ import requests
 import pprint
 
 url = 'https://api.hh.ru/vacancies'
-
+#выбор из списка
 where = input('Где искать вакансию?')
+#текст
 query_string = input('Строка запроса?')
 
 params = {
