@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Удалил опечатку">
-      <change afterPath="$PROJECT_DIR$/lesson14/5ka.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/edadeal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/goods.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/lenta-super.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/nu14_dz1-master/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/nu14_dz1-master/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/nu14_dz1-master/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/nu14_dz1-master/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/nu14_dz1-master/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/offers_pb2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson14/perekrestok.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/py_lessons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_lessons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Add lesson14" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="lesson13" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -304,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660503245321</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add lesson14">
+      <created>1660989566260</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660989566260</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -331,7 +322,8 @@
     <MESSAGE value="Added homework" />
     <MESSAGE value="Added homework for pull request" />
     <MESSAGE value="Удалил опечатку" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удалил опечатку" />
+    <MESSAGE value="Add lesson14" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add lesson14" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
