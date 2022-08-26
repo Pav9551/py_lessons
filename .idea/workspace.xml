@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Add lesson15 template">
+    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Add lesson15 for pull request">
       <change afterPath="$PROJECT_DIR$/lesson15/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson15/edadeal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson15/goods.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson15/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson15/offers_pb2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson14/5ka.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/lesson14/5ka.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson14/goods.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/lesson14/goods.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson14/lenta-super.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/lesson14/lenta-super.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson14/perekrestok.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/lesson14/perekrestok.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson15/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lesson15/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson15/digital.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson15/telegram.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661523026282</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add lesson15 for pull request">
+      <created>1661533944752</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1661533944752</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -366,7 +372,8 @@
     <MESSAGE value="Add Spar" />
     <MESSAGE value="Add readme" />
     <MESSAGE value="Add lesson15 template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add lesson15 template" />
+    <MESSAGE value="Add lesson15 for pull request" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add lesson15 for pull request" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
