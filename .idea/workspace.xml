@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Add to requirements.txt&#10;pandas==1.4.3&#10;protobuf==3.19.1&#10;openpyxl==3.0.10">
+    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Add Dockerfile">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -346,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661707560934</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add Dockerfile">
+      <created>1661708219819</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1661708219819</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,7 +388,8 @@
     <MESSAGE value="Add lesson15 template" />
     <MESSAGE value="Add lesson15 for pull request" />
     <MESSAGE value="Add to requirements.txt&#10;pandas==1.4.3&#10;protobuf==3.19.1&#10;openpyxl==3.0.10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to requirements.txt&#10;pandas==1.4.3&#10;protobuf==3.19.1&#10;openpyxl==3.0.10" />
+    <MESSAGE value="Add Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Dockerfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
