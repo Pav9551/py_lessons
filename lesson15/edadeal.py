@@ -1,6 +1,7 @@
 import requests
 import re
 import json
+import os
 from os.path import exists
 import pandas as pd
 pd.set_option('display.max_colwidth', 100)
@@ -9,7 +10,24 @@ pd.set_option('display.max_colwidth', 100)
 #https://habr.com/ru/post/680320/?ysclid=l6xpo6itvm552340478
 from google.protobuf.json_format import MessageToJson#protobuf
 import offers_pb2#
-
+def get_files_in_current_dir():
+    print("Список файлов в текущей директории:")
+    files = list(filter(lambda x: os.path.isfile(x), os.listdir(".")))
+    ret = []
+    for file in files:
+        if file.endswith('.xlsx'):
+            if file == "5ka.xlsx":
+                ret.append(file)
+            if file == "lenta-super.xlsx":
+                ret.append(file)
+            if file == "eurospar.xlsx":
+                ret.append(file)
+            if file == "perekrestok.xlsx":
+                ret.append(file)
+            if file == "dixy.xlsx":
+                ret.append(file)
+    print(ret)
+    return ret
 def parse_page(city = "moskva", shop = "lenta-super", page_num = 25):
     """
     :param city: location of the shop
@@ -77,7 +95,7 @@ class ED:
         for good in self.excel_data_df.name:
             count = 0
             for good_discount in self.df_res.name:
-                result = re.match(good, good_discount)
+                result = re.match(good.lower(), good_discount.lower())
                 if ((result is None) == False):
                     #print(count, good_discount)
                     df = pd.DataFrame({
@@ -106,3 +124,35 @@ class ED:
                     return f"Файл отправлен."
         else:
             return f"Файл не сформирован."
+    def send_all(self,token,chat_id):
+        files = get_files_in_current_dir()
+        self.all_data_df = pd.DataFrame()
+        if len(files) == 0:
+            return False
+
+        for file in files:
+            df = pd.read_excel(file, sheet_name='Sheet1')
+            df['shop'] = file
+            self.all_data_df = pd.concat([self.all_data_df , df])
+            try:
+                if os.path.exists(file):  # Объект найден
+                    os.remove(file)
+                    print('Файл удалён: {}'.format(file))
+            except:
+                print("Ошибка удаления файла/папки.")
+        self.all_data_df.sort_values(['good','priceAfter'], ascending=[True, True], kind="mergesort", inplace=True)
+        filename = f"all.xlsx"
+        self.all_data_df.to_excel(filename, index=False)
+        url = f'https://api.telegram.org/bot{token}/'
+        method = url + 'sendDocument'
+        if exists(filename):
+            with open(filename, "rb") as filexlsx:
+                files = {"document": filexlsx}
+                title = filename
+                r = requests.post(method, data={"chat_id": chat_id, "caption": title}, files=files)
+                if r.status_code != 200:
+                    raise Exception("send error")
+                else:
+                    return True
+        else:
+            return False

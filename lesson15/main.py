@@ -1,4 +1,4 @@
-from edadeal import ED
+﻿from edadeal import ED
 from os import getenv
 
 # библиотека для загрузки данных из env
@@ -9,6 +9,8 @@ lenta = ED(CITY = "moskva", SHOP = "lenta-super")#создаем экземпл�
 pyterochka = ED(CITY = "moskva", SHOP = "5ka")#создаем экземпляр класса
 perekrestok = ED(CITY = "moskva", SHOP = "perekrestok")#создаем экземпляр класса
 eurospar = ED(CITY = "moskva", SHOP = "eurospar")#создаем экземпляр класса
+dixy = ED(CITY = "moskva", SHOP = "dixy")#создаем экземпляр класса
+
 ans = ''
 
 # метода ищет файл env и переменные из него
@@ -26,6 +28,8 @@ def send_welcome(message):
                 "/5ka - поиск товаров из списка со скидками в Пятерочка",
                 "/perek - поиск товаров из списка со скидками в Перекресток",
                 "/spar - поиск товаров из списка со скидками в Eurospar",
+		        "/dixy - поиск товаров из списка со скидками в Дикси",
+                "/all - поиск по всем сформированным файлам и сортировка по цене",
                 ]
     bot.reply_to(message, "\n".join(new_text))
 @bot.message_handler(commands=['add'])
@@ -77,13 +81,28 @@ def search_good5ka(message):
     perekrestok.search()#создаем файл
     perekrestok.send_file(token,chat_id)#отправляем файл
 @bot.message_handler(commands=['spar'])
-def search_good5ka(message):
+def search_goodspar(message):
     chat_id = message.chat.id
     eurospar.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
     bot.send_message(chat_id, f'Ждите, идет запрос ...')
     eurospar.get_df_discount()  # запрашиваем список товаров со скидками
     eurospar.search()#создаем файл
     eurospar.send_file(token,chat_id)#отправляем файл
+@bot.message_handler(commands=['dixy'])
+def search_gooddixy(message):
+    chat_id = message.chat.id
+    dixy.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
+    bot.send_message(chat_id, f'Ждите, идет запрос ...')
+    dixy.get_df_discount()  # запрашиваем список товаров со скидками
+    dixy.search()#создаем файл
+    dixy.send_file(token,chat_id)#отправляем файл
+@bot.message_handler(commands=['all'])
+def search_all(message):
+    chat_id = message.chat.id
+    dixy.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
+    bot.send_message(chat_id, f'Ждите, идет объединение файлов ...')
+    if not dixy.send_all(token,chat_id):#отправляем файл
+        bot.send_message(chat_id, f'Не найдено файлов для объединения!')
 
 @bot.message_handler(func=lambda m: True)
 def echo(message):

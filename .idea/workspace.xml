@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Add Dockerfile">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Del ./env">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson15/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lesson15/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson15/edadeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson15/edadeal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson15/goods.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/lesson15/goods.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson15/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson15/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661708219819</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Del ./env">
+      <created>1661708392187</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1661708392187</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,7 +399,8 @@
     <MESSAGE value="Add lesson15 for pull request" />
     <MESSAGE value="Add to requirements.txt&#10;pandas==1.4.3&#10;protobuf==3.19.1&#10;openpyxl==3.0.10" />
     <MESSAGE value="Add Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Dockerfile" />
+    <MESSAGE value="Del ./env" />
+    <option name="LAST_COMMIT_MESSAGE" value="Del ./env" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
