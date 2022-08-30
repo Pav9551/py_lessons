@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Add Dockerfile">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson14" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,9 +103,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/py_lessons/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson15" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson15/main.py" />
@@ -186,8 +185,8 @@
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.telegram" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.edadeal" />
         <item itemvalue="Python.ltest" />
+        <item itemvalue="Python.edadeal" />
       </list>
     </recent_temporary>
   </component>
@@ -367,7 +366,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Copied folder lesson5 to lesson6" />
@@ -390,15 +388,5 @@
     <MESSAGE value="Add to requirements.txt&#10;pandas==1.4.3&#10;protobuf==3.19.1&#10;openpyxl==3.0.10" />
     <MESSAGE value="Add Dockerfile" />
     <option name="LAST_COMMIT_MESSAGE" value="Add Dockerfile" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/lesson14/edadeal.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
