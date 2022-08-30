@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Added lesson7">
-      <change afterPath="$PROJECT_DIR$/lesson12/Airtable.py" afterDir="false" />
+    <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Added .gitignore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/py_lessons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_lessons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson12/hh.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson12/hh.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612887079646</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added .gitignore">
+      <created>1661852965255</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661852965255</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +250,7 @@
     <MESSAGE value="Copied folder lesson5 to lesson6" />
     <MESSAGE value="Added test_python.py" />
     <MESSAGE value="Added lesson7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added lesson7" />
+    <MESSAGE value="Added .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added .gitignore" />
   </component>
 </project>
