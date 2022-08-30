@@ -3,3 +3,7 @@
 /lesson15/eurospar.xlsx
 /lesson15/5ka.xlsx
 /lesson15/.env
+/venv/
+.gitignore
+/.idea/
+/venv/.gitignore
