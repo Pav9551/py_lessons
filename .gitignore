@@ -8,3 +8,4 @@
 .gitignore
 /.idea/
 /venv/.gitignore
+/lesson15/server/.env
