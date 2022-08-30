@@ -3,4 +3,4 @@
 /lesson15/server/.env
 /venv/
 /.idea/
-.gitignore
+/.gitignore

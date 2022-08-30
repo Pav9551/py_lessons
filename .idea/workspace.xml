@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="858379e9-9080-4b37-b044-97505bd671b7" name="Default Changelist" comment="Added lesson7">
       <change afterPath="$PROJECT_DIR$/lesson12/Airtable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/py_lessons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_lessons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson12/hh.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson12/hh.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +242,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Copied folder lesson5 to lesson6" />
