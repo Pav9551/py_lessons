@@ -55,6 +55,7 @@ class ED:
     def load_xlsx(self,search_goods=GOODS):
         self.search_goods = search_goods
         self.excel_data_df = pd.read_excel(search_goods, sheet_name='Sheet1')
+
         return self.excel_data_df
     def add_xlsx(self,add_good=good):
         self.add_good = add_good
@@ -67,6 +68,25 @@ class ED:
         self.excel_data_df.to_excel(self.GOODS,index = False)
         print(self.excel_data_df)
         text = f'В файл {self.GOODS} добавлен товар: {self.add_good}'
+        return text
+    def save_username(self,message_chat):
+        self.add_good = message_chat.first_name
+        chat_id = message_chat.id
+        chat_first_name = message_chat.first_name
+        chat_last_name = message_chat.last_name
+        chat_username = message_chat.username
+        self.excel_data_df = pd.read_excel("names.xlsx", sheet_name='Sheet1')
+        df = pd.DataFrame({
+            'chat_id': [chat_id],
+            'first_name': [chat_first_name],
+            'last_name': [chat_last_name],
+            'username': [chat_username]})
+        self.excel_data_df = pd.concat([self.excel_data_df, df])
+        self.excel_data_df = self.excel_data_df.drop_duplicates(subset=['chat_id'])
+        self.excel_data_df.reset_index(inplace=True, drop=True)
+        self.excel_data_df.to_excel('names.xlsx',index = False)
+        print(self.excel_data_df)
+        text = f'В пользователь {self.add_good}'
         return text
     def del_good_xlsx(self,del_num=num):
         self.del_num = int(del_num)
@@ -113,6 +133,21 @@ class ED:
         url = f'https://api.telegram.org/bot{token}/'
         method = url + 'sendDocument'
         filename = f"{self.shop}.xlsx"
+        if exists(filename):
+            with open(filename, "rb") as filexlsx:
+                files = {"document": filexlsx}
+                title = filename
+                r = requests.post(method, data={"chat_id": chat_id, "caption": title}, files=files)
+                if r.status_code != 200:
+                    raise Exception("send error")
+                else:
+                    return f"Файл отправлен."
+        else:
+            return f"Файл не сформирован."
+    def send_users(self,token,chat_id):
+        url = f'https://api.telegram.org/bot{token}/'
+        method = url + 'sendDocument'
+        filename = f"names.xlsx"
         if exists(filename):
             with open(filename, "rb") as filexlsx:
                 files = {"document": filexlsx}
