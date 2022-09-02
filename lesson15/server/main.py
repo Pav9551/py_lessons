@@ -21,6 +21,7 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
+    lenta.save_username(message.chat)
     new_text = ["/read - вывести список искомых товаров",
                 "/add {Имя товара} - добавить новый товар в список товаров",
                 "/del {1,2 .. 10} - удалить товар из списка по номеру",
@@ -34,6 +35,7 @@ def send_welcome(message):
     bot.reply_to(message, "\n".join(new_text))
 @bot.message_handler(commands=['add'])
 def add_good(message):
+    lenta.save_username(message.chat)
     text_out = 'Пример команды - /add Молоко'
     if len (message.text.split()) > 1:
         text = message.text[4:].lstrip(' ')
@@ -44,11 +46,13 @@ def add_good(message):
 
 @bot.message_handler(commands=['read'])
 def read_goods(message):
+    lenta.save_username(message.chat)
     lenta.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
     chat_id = message.chat.id
     bot.send_message(chat_id, f'{lenta.excel_data_df.name}')
 @bot.message_handler(commands=['del'])
 def delete_good(message):
+    lenta.save_username(message.chat)
     text_out = 'Пример команды - /del 0'
     if len (message.text.split()) > 1:
         text = message.text.split()[1]
@@ -59,6 +63,7 @@ def delete_good(message):
 @bot.message_handler(commands=['lenta'])
 def search_good5ka(message):
     chat_id = message.chat.id
+    lenta.save_username(message.chat)
     lenta.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
     bot.send_message(chat_id, f'Ждите, идет запрос ...')
     lenta.get_df_discount()  # запрашиваем список товаров со скидками
@@ -67,6 +72,7 @@ def search_good5ka(message):
 @bot.message_handler(commands=['5ka'])
 def search_good5ka(message):
     chat_id = message.chat.id
+    pyterochka.save_username(message.chat)
     pyterochka.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
     bot.send_message(chat_id, f'Ждите, идет запрос ...')
     pyterochka.get_df_discount()  # запрашиваем список товаров со скидками
@@ -75,6 +81,7 @@ def search_good5ka(message):
 @bot.message_handler(commands=['perek'])
 def search_good5ka(message):
     chat_id = message.chat.id
+    perekrestok.save_username(message.chat)
     perekrestok.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
     bot.send_message(chat_id, f'Ждите, идет запрос ...')
     perekrestok.get_df_discount()  # запрашиваем список товаров со скидками
@@ -83,6 +90,7 @@ def search_good5ka(message):
 @bot.message_handler(commands=['spar'])
 def search_goodspar(message):
     chat_id = message.chat.id
+    eurospar.save_username(message.chat)
     eurospar.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
     bot.send_message(chat_id, f'Ждите, идет запрос ...')
     eurospar.get_df_discount()  # запрашиваем список товаров со скидками
@@ -91,6 +99,7 @@ def search_goodspar(message):
 @bot.message_handler(commands=['dixy'])
 def search_gooddixy(message):
     chat_id = message.chat.id
+    dixy.save_username(message.chat)
     dixy.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
     bot.send_message(chat_id, f'Ждите, идет запрос ...')
     dixy.get_df_discount()  # запрашиваем список товаров со скидками
@@ -99,13 +108,20 @@ def search_gooddixy(message):
 @bot.message_handler(commands=['all'])
 def search_all(message):
     chat_id = message.chat.id
+    dixy.save_username(message.chat)
     dixy.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
     bot.send_message(chat_id, f'Ждите, идет объединение файлов ...')
     if not dixy.send_all(token,chat_id):#отправляем файл
         bot.send_message(chat_id, f'Не найдено файлов для объединения!')
-
+@bot.message_handler(commands=['users'])
+def search_goodspar(message):
+    chat_id = message.chat.id
+    eurospar.save_username(message.chat)
+    eurospar.send_users(token,chat_id)#отправляем файл
 @bot.message_handler(func=lambda m: True)
 def echo(message):
+    #dixy.load_xlsx('goods.xlsx')  # загружаем интересующие нас товары
+    dixy.save_username(message.chat)
     print(message)
     bot.reply_to(message, message.text.upper())
 
