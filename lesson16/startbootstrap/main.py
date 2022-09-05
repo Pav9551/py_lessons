@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 
 # объявление главной переменной
 app = Flask(__name__,static_url_path='',
-static_folder='dist/css',
+static_folder='dist',
 template_folder='dist')
 
 
