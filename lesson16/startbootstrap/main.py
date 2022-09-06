@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
-
-#from hh_json import parce
+import requests
+import time
+from hh import HH
 
 # объявление главной переменной
 app = Flask(__name__,static_url_path='',
