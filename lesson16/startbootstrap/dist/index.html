@@ -169,23 +169,21 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                         <form action="results.html">
-                                <!-- input для ввода текста -->
-                                <input type="text" class="form-control" name = "query_string" placeholder="строка поиска">
-                                <br>
-                                <br>
-                                <!--select - выпадающий список -->
-                                 <p><select name="where" class="form-control">
-                                    <option value="All">Везде</option>
-                                    <option value="Чебурашка">В названии компании</option>
-                                    <option selected value="Крокодил Гена">В названии вакансии</option>
-                                    </select></p>
-
-                                <!-- submit - кнпка -->
-                                <br>
-                                <br>
-                                <input type="submit" value="Искать вакансии">
-                         </form>
+                        <form action="/result" method="post">
+                            <div class="form-group">
+                                <label for="vacancy">Текст поиска:</label>
+                                <input type="text" name="vacancy" placeholder="Строка поиска" class="form-control" id="vacancy">
+                                <label for="wh">Где искать:</label>
+                                <select name="where" class="form-control" id="wh">
+                                    <option value="all">Везде</option>
+                                    <option value="company">В названии компании</option>
+                                    <option selected value="name">В названии вакансии</option>
+                                </select>
+                                <label for="p">Количество анализируемых страниц</label>
+                                <input type="number" name="pages" value="3" class="form-control" id="p">
+                                <input type="submit" value="Искать вакансию" class="btn btn-primary">
+                            </div>
+                        </form>
 
                     </div>
                 </div>
