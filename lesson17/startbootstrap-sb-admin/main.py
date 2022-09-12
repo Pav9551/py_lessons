@@ -3,7 +3,7 @@ import requests
 import time
 
 from hh_json import parce
-
+count = 1
 # объявление главной переменной
 app = Flask(__name__,static_url_path='',
 static_folder='dist',
@@ -12,6 +12,7 @@ template_folder='dist')
 
 # вывод (редеринг) главной страницы
 @app.route('/')
+@app.route('/index')
 def index():
     dat = {'keywords': '0', 'count': 100, 'down': 260196.25, 'up': 2083139.0,
            'requirements': [{'name': 'грамотная речь', 'count': 52, 'percent': 52.0},
