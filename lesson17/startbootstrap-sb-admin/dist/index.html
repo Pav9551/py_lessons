@@ -160,6 +160,21 @@
                                         Area Chart Example
                                     </div>
                                     <!--<div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>!-->
+                                    <form action="/result" method="post">
+                            <div class="form-group">
+                                <label for="vacancy">Текст поиска:</label>
+                                <input type="text" name="vacancy" placeholder="Строка поиска" class="form-control" id="vacancy">
+                                <label for="wh">Где искать:</label>
+                                <select name="where" class="form-control" id="wh">
+                                    <option value="all">Везде</option>
+                                    <option value="company">В названии компании</option>
+                                    <option selected value="name">В названии вакансии</option>
+                                </select>
+                                <label for="p">Количество анализируемых страниц</label>
+                                <input type="number" name="pages" value="3" class="form-control" id="p">
+                                <input type="submit" value="Искать вакансию" class="btn btn-primary">
+                            </div>
+                        </form>
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -168,7 +183,7 @@
                                         <i class="fas fa-chart-bar me-1"></i>
                                         Bar Chart Example
                                     </div>
-                                    <!--<div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>-->
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
@@ -178,6 +193,28 @@
                                 DataTable Example
                             </div>
                             <div class="card-body">
+                                 <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Номер</th>
+                                            <th scope="col">Название</th>
+                                            <th scope="col">Процент упоминаний</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in res['requirements'] %}
+                                            <tr>
+                                                <th scope="row">{{ loop.index }} </th>
+                                                <td>{{ item['name'].capitalize() }}</td>
+                                                <td align="right">{{ item['percent'] }}%</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+
+
+
+
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
