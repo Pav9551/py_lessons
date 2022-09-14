@@ -7,3 +7,4 @@
 .gitignore
 /.idea/
 /venv/.gitignore
+/lesson17/startbootstrap-sb-admin/.env
