@@ -14,7 +14,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="index.html">Yakor</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -43,7 +43,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a href="index.html">На главную</a>
+                           <!-- <a href="index.html">На главную</a>!-->
                             <a class="nav-link" href="index.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
@@ -111,9 +111,9 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
+                        <h1 class="mt-4">Таблица превышений уровня шума в номерах</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                           <!-- <li class="breadcrumb-item active">Dashboard</li>!-->
                         </ol>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
@@ -155,13 +155,13 @@
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                                <div class="card mb-4">
+                               <!-- <div class="card mb-4">
                                     <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
+                                         <i class="fas fa-chart-area me-1"></i>
                                         Area Chart Example
-                                    </div>
-                                    <!--<div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>!-->
-                                    <form action="/result" method="post">
+                                    </div>!-->
+                                   <!--<div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>!-->
+                                    <!--<form action="/result" method="post">
                             <div class="form-group">
                                 <label for="vacancy">Текст поиска:</label>
                                 <input type="text" name="vacancy" placeholder="Строка поиска" class="form-control" id="vacancy">
@@ -176,9 +176,9 @@
                                 <input type="submit" value="Искать вакансию" class="btn btn-primary">
                             </div>
                         </form>
-                                </div>
+                                </div>-->
                             </div>
-                            <div class="col-xl-6">
+                           <!-- <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
@@ -186,12 +186,12 @@
                                     </div>
                                     <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                DataTable Example
+                                {{time}}
                             </div>
                             <div class="card-body">
                                  <table class="table">
@@ -199,15 +199,29 @@
                                         <tr>
                                             <th scope="col">Номер</th>
                                             <th scope="col">Название</th>
-                                            <th scope="col">Процент упоминаний</th>
+                                            <th scope="col" align="right">Количество превышений</th>
+                                            <th scope="col" align="right">Общее количество измерений за час</th>
+                                            <th scope="col" align="right">Процент превышений за час измерений</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        {% for item in res['requirements'] %}
+                                   <!-- <tbody>
+                                        {% for item in res %}
                                             <tr>
                                                 <th scope="row">{{ loop.index }} </th>
-                                                <td>{{ item['name'].capitalize() }}</td>
-                                                <td align="right">{{ item['percent'] }}%</td>
+                                                <td>{{ item.capitalize() }}</td>
+                                                <td align="right">{{ item.count}}%</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>!-->
+
+                                        <tbody>
+                                        {% for k , v in res.items() %}
+                                            <tr>
+                                                <th scope="row">{{ loop.index }} </th>
+                                                <td align="left">{{ k }}</td>
+                                                <td align="left">{{v['loud']}}</td>
+                                                <td align="left">{{v['count']}}</td>
+                                                <td align="left">{{v['percent']}} %</td>
                                             </tr>
                                         {% endfor %}
                                     </tbody>
@@ -216,7 +230,7 @@
 
 
 
-                                <table id="datatablesSimple">
+                               <!--  <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -699,7 +713,7 @@
                             </div>
                         </div>
                     </div>
-                </main>
+                </main>-->
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">

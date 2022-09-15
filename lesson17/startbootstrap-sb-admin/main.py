@@ -1,11 +1,6 @@
 from flask import Flask, render_template, request
 from flask_apscheduler import APScheduler
-from pymongo import MongoClient
-from sql_mongo import to_mongo
-import requests
-import time
-
-from hh_json import parce
+from sql_mongo import to_mongo,from_mongo
 count = 1
 # set configuration values
 class Config:
@@ -29,24 +24,17 @@ scheduler.start()
 @scheduler.task('interval', id='do_job_1', seconds=30, misfire_grace_time=900)
 def job1():
     to_mongo()
-    print('Job 1 executed')
+    #print('Job 1 executed')
 
 
 # вывод (редеринг) главной страницы
 @app.route('/')
 @app.route('/index')
 def index():
-    dat = {'keywords': '0', 'count': 100, 'down': 260196.25, 'up': 2083139.0,
-           'requirements': [{'name': 'грамотная речь', 'count': 52, 'percent': 52.0},
-                            {'name': 'работа в команде', 'count': 50, 'percent': 50.0},
-                            {'name': 'деловое общение', 'count': 36, 'percent': 36.0},
-                            {'name': 'активные продажи', 'count': 25, 'percent': 25.0},
-                            {'name': 'навыки продаж', 'count': 25, 'percent': 25.0}], 'vacancy': '0', 'where': 'name',
-           'pages': '3'}
-    print(dat)
-    return render_template('index.html', res=dat)
-
-
+    dat, time = from_mongo()
+    rooms = dat.copy()
+    rooms.pop('_id')
+    return render_template('index.html', res=rooms, time = time)
 # вывод страницы формы
 @app.route('/form/')
 def form():
