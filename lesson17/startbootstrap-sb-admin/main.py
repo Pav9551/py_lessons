@@ -24,7 +24,7 @@ scheduler.start()
 @scheduler.task('interval', id='do_job_1', seconds=30, misfire_grace_time=900)
 def job1():
     to_mongo()
-    #print('Job 1 executed')
+    print('Job 1 executed')
 
 
 # вывод (редеринг) главной страницы
@@ -55,4 +55,4 @@ def result():
     print(dat)
     return render_template('results.html', res=dat)
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(host='0.0.0.0', port=5000, debug = True)
