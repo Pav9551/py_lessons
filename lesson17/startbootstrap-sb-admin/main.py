@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_apscheduler import APScheduler
 from sql_mongo import to_mongo,from_mongo
+from flask_bootstrap import Bootstrap
 count = 1
 # set configuration values
 class Config:
@@ -9,7 +10,7 @@ class Config:
 app = Flask(__name__,static_url_path='',
 static_folder='dist',
 template_folder='dist')
-
+bootstrap = Bootstrap(app)
 app.config.from_object(Config())
 
 # initialize scheduler
@@ -29,7 +30,7 @@ def job1():
 
 # вывод (редеринг) главной страницы
 @app.route('/')
-@app.route('/index')
+@app.route('/index.html')
 def index():
     dat, time = from_mongo()
     rooms = dat.copy()
@@ -55,4 +56,4 @@ def result():
     print(dat)
     return render_template('results.html', res=dat)
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
