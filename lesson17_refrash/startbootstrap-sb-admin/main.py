@@ -46,7 +46,7 @@ def index1():
                 total.append(k)
                 count = count + 1
                 loudper = v['loud']/v['count']*100
-                if (loudper > 0) and (loudper < 10):
+                if (loudper >= 1) and (loudper < 10):
                     above0pr.append(k)
                 if (loudper >= 10) and (loudper < 20):
                     above10pr.append(k)
