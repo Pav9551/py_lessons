@@ -41,8 +41,51 @@ def index1():
     dat, time = from_mongo()
     rooms = dat.copy()
     rooms.pop('_id')
-    print(time)
-    return time
+    total = []
+    above0pr = []
+    above10pr = []
+    above20pr = []
+    count = 0
+    for k , v in rooms.items():
+        if k != 'тестовое':
+            #print(k,v['count'])
+            if v['count'] > 0:
+                total.append(k)
+                count = count + 1
+                loudper = v['loud']/v['count']*100
+                if (loudper > 0) and (loudper < 10):
+                    above0pr.append(k)
+                if (loudper >= 10) and (loudper < 20):
+                    above10pr.append(k)
+                if (loudper >= 20):
+                    above20pr.append(k)
+
+    str = ','.join(total)
+    strabove0pr = ','.join(above0pr)
+    strabove10pr = ','.join(above10pr)
+    strabove20pr = ','.join(above20pr)
+    per = int(count/12*100)
+    summary = f"Сейчас работает {per} % устройств, а именно: {str}."
+    success = f"Незначительный шум в помещениях: {strabove0pr}."
+    warning = f"Умеренный шум в помещениях: {strabove10pr}."
+    danger = f"Внимание! Превышение более 20%: {strabove20pr}."
+
+    if len(above0pr) == 0:
+        success = f"Помещений с незначительным шумом не найдено."
+    if len(above10pr) == 0:
+        warning = f"Помещений с превышением 10% не найдено."
+    if len(above20pr) == 0:
+        danger  = f"Помещений с превышением 20% не найдено."
+
+    if len(above0pr) == 1:
+        success = f"Незначительный шум в помещении {strabove0pr}."
+    if len(above10pr) == 1:
+        warning = f"Умеренный шум в помещении {strabove10pr}."
+    if len(above20pr) == 1:
+        danger  = f"Внимание! Превышение более 20% в {strabove20pr}."
+
+    dictsummary = dict(primary = summary,success = success,warning = warning,danger = danger)
+    return dictsummary
 
 # вывод (редеринг) главной страницы
 @app.route('/')
