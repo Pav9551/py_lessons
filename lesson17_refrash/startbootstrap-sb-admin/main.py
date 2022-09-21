@@ -4,14 +4,7 @@ from sql_mongo import to_mongo,from_mongo
 #from flask_bootstrap import Bootstrap
 count = 1
 
-def cpu_temp():
-    try:
-        dev = os.popen('sensors')
-        cpu_temp = dev.read().split(' ')[6][1:-2]
-    except:
-        cpu_temp ='50.0'
-        print('sudo apt-get install lm-sensors')
-    return cpu_temp
+
 # set configuration values
 class Config:
     SCHEDULER_API_ENABLED = True
