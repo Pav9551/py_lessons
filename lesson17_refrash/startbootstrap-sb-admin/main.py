@@ -53,12 +53,12 @@ def index1():
                 if (loudper >= 20):
                     above20pr.append(k)
 
-    str = ','.join(total)
-    strabove0pr = ','.join(above0pr)
-    strabove10pr = ','.join(above10pr)
-    strabove20pr = ','.join(above20pr)
-    per = int(count/12*100)
-    summary = f"Сейчас работает {per} % устройств, а именно: {str}."
+    str = ', '.join(total)
+    strabove0pr = ', '.join(above0pr)
+    strabove10pr = ', '.join(above10pr)
+    strabove20pr = ', '.join(above20pr)
+    per = count
+    summary = f"Сейчас работает {per} устройств из 12, а именно: {str}."
     success = f"Незначительный шум в помещениях: {strabove0pr}."
     warning = f"Умеренный шум в помещениях: {strabove10pr}."
     danger = f"Внимание! Превышение более 20%: {strabove20pr}."
