@@ -39,5 +39,5 @@ def result():
         if dat['where'] == 'name' else 'в названии компании' if dat['where'] == 'company' else 'везде'
     add_row(dat)
     return render_template('results.html', res=dat)
-if __name__ == "__main__":
-    app.run(debug=True)
+#if __name__ == "__main__":
+    #app.run(debug=True)
