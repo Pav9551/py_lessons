@@ -8,9 +8,6 @@
 [![Freelancer Preview](https://assets.startbootstrap.com/img/screenshots/themes/freelancer.png)](https://startbootstrap.github.io/startbootstrap-freelancer/)
 
 **[View Live Preview](https://startbootstrap.github.io/startbootstrap-freelancer/)**
-
-ndencies Status](https://david-dm.org/StartBootstrap/startbootstrap-freelancer/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-freelancer?type=dev)
-
 ## Установка и запуск
 
 Перед тем как пытаться запусить, прочитайте инструкцию:
