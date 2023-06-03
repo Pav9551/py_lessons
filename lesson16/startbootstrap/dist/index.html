@@ -137,15 +137,30 @@
                 <!-- About Section Content-->
                 <div class="row">
                     <div class="col-lg-4 ms-auto"><p class="lead">Тебе надоело вводить одни и те же поисковые запросы в hh и разбирать сотни вакансий в надежде найти подходящую работу. </p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">Парсер умеет получать вакансии с hh, применяя более сложные запросы и фильтрации. Это благодаря использованию API. </p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">Парсер умеет получать востребованные навыки с hh, применяя сложные запросы и фильтрации. Это благодаря использованию API. </p></div>
                 </div>
                 <!-- About Section Button-->
+
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="">
+                    <!--<a class="btn btn-xl btn-outline-light" href="">
                         <i class="fas fa-download me-2"></i>
                         Не благодари
-                    </a>
+                    </a>-->
+                     <form  action="/clear" method="post">
+
+
+
+                           <input  class="my_color" type="submit" value="Очистить базу" class="btn btn-primary">
+
+
+                       <!--<input type="submit" value="Очистить базу" class="btn btn-primary"> -->
+
+                       </form>
+
                 </div>
+
+
+
             </div>
         </section>
         <!-- Contact Section-->
@@ -159,6 +174,8 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+
+
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
@@ -171,6 +188,16 @@
                         <!-- to get an API token!-->
                         <form action="/result" method="post">
                             <div class="form-group">
+                                <!-- SQL-->
+                                <ul class="form-group text-center">
+                                {% for name in sql_qwery['name'] %}
+
+                                  <a>{{ name |e }}</a>
+                                    {% else %}
+                                    <li><em >Запросы еще никто не делал, Вы будете первым</em></li>
+                                {% endfor %}
+                                </ul>
+
                                 <label for="vacancy">Текст поиска:</label>
                                 <input type="text" name="vacancy" placeholder="Строка поиска" class="form-control" id="vacancy">
                                 <label for="wh">Где искать:</label>
@@ -182,11 +209,22 @@
                                 <label for="p">Количество анализируемых страниц</label>
                                 <input type="number" name="pages" value="3" class="form-control" id="p">
                                 <input type="submit" value="Искать вакансию" class="btn btn-primary">
+
                             </div>
+
+
+
                         </form>
 
+
+                       </div>
                     </div>
+
+
+
                 </div>
+
+
             </div>
         </section>
         <!-- Footer-->
